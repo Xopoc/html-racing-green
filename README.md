@@ -23,3 +23,7 @@ Configuration and instalation
     </VirtualHost>
     
 
+### Install  [Composer](https://getcomposer.org/ "composer")  ###
+  Then run the following composer command:
+  
+    $ php composer.phar install
