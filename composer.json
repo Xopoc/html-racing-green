@@ -1,0 +1,15 @@
+{
+    "name": "xopoc/racing-green",
+    "description": "Description of project racing-green.",
+    "authors": [
+        {
+            "name": "Xopoc",
+            "email": "vasilij.zhukov@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.*"
+    }
+}
