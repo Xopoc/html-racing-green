@@ -3,3 +3,7 @@ vendor/*
 
 # ide
 nbproject/*
+
+# temp directories
+__temp/*
+temp/*
