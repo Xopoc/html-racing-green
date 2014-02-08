@@ -18,4 +18,10 @@ $app->get('/', function () use ($app) {
     $app->render('index.html.twig');
 })->name('home');
 
+$app->get('/hello/:name', function ($name) use ($app) {
+    $app->render('hello.html.twig', array(
+            'name' => $name
+        ));
+})->name('hello');
+
 $app->run();

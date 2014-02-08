@@ -26,14 +26,22 @@
     </head>
     <body>
         <h1>Racing Green <span class="glyphicon glyphicon-leaf"></span></h1>
-        <p>
-            Cheking twig url generation:
-            <ul>
-                <li><a href="{{ urlFor('home') }}">home</a></li>
-                <li><a href="{{ baseUrl() }}">base Url</a></li>
-            </ul>
-        </p>
-
+        
+        {% block menu %}
+            <p>
+                Cheking twig url generation:
+                <ul>
+                    <li><a href="{{ urlFor('home') }}">home</a></li>
+                    <li><a href="{{ urlFor('hello', {"name": "Xopoc"}) }}">profile</a></li>
+                    <li><a href="{{ baseUrl() }}">base Url</a></li>
+                </ul>
+            </p>
+        {% endblock %}
+        
+        {% block content %}
+            <h2>Index page</h2>
+        {% endblock %}
+        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/js/jquery-1.11.0.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
