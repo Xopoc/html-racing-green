@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/img/logo-icon.png">
         <title>Racing Green</title>
 
 
@@ -29,22 +30,25 @@
         <![endif]-->
     </head>
     <body>
-        <h1 style="font-size: 20px;">Racing Green <i class="glyphicon glyphicon-leaf"></i> <i class="fa fa-smile-o"></i></h1>
+        <div class="body-wrap">
+{#            <h1 style="font-size: 20px;">Racing Green <i class="glyphicon glyphicon-leaf"></i> <i class="fa fa-smile-o"></i></h1>#}
+            {% block menu %}
+                <p>
+                    Cheking twig url generation:
+                    <ul class="simple-menu simple-menu-tabs">
+                        <li><a href="{{ urlFor('home') }}">home</a></li>
+                        <li><a href="{{ urlFor('hello', {"name": "Xopoc"}) }}">profile</a></li>
+                        <li><a href="{{ baseUrl() }}">base Url</a></li>
+                    </ul>
+                </p>
+            {% endblock %}
+            {% block content %}{% endblock %}
+        </div>
+        <div class="footer-wrap">
+            {% include 'components/footer.html.twig' %}
+        </div>
         
-        {% block menu %}
-            <p>
-                Cheking twig url generation:
-                <ul>
-                    <li><a href="{{ urlFor('home') }}">home</a></li>
-                    <li><a href="{{ urlFor('hello', {"name": "Xopoc"}) }}">profile</a></li>
-                    <li><a href="{{ baseUrl() }}">base Url</a></li>
-                </ul>
-            </p>
-        {% endblock %}
         
-        {% block content %}
-            <h2>Index page</h2>
-        {% endblock %}
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="/js/jquery-1.11.0.min.js"></script>

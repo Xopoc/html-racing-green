@@ -1,0 +1,46 @@
+//
+// Navs
+// --------------------------------------------------
+
+
+// Base menu
+// --------------------------------------------------
+
+.simple-menu {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    &:extend(.clearfix all);
+
+    > li {
+      display: block;
+      position: relative;
+      
+      > a {
+        display: block;
+        position: relative;
+        padding: @nav-link-padding;
+      }
+    }
+
+    // Prevent IE8 from misplacing imgs
+    //
+    // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+    > li > a > img {
+      max-width: none;
+    }
+  
+  
+    // Give the tabs something to sit on
+    &-tabs {
+        > li {
+             float: left;
+
+             &:first-child {
+                 border-left: none;
+             }
+        }
+     }
+}
+
+

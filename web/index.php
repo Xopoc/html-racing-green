@@ -15,11 +15,11 @@ $view->parserExtensions = array(
 );
 
 $app->get('/', function () use ($app) {
-    $app->render('index.html.twig');
+    $app->render('pages/index.html.twig');
 })->name('home');
 
 $app->get('/hello/:name', function ($name) use ($app) {
-    $app->render('hello.html.twig', array(
+    $app->render('pages/hello.html.twig', array(
             'name' => $name
         ));
 })->name('hello');

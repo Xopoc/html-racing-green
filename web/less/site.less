@@ -1,0 +1,90 @@
+a {
+    .transition(all .2s ease-in-out);
+}
+
+/* STICKY FOOTER
+======================================== */
+html,
+body {
+  height: 100%;
+}
+body > .body-wrap {
+    height: auto;
+    margin: 0 auto -@footer-height;
+    min-height: 100%;
+    padding: 0 0 @footer-height;
+}
+body > .footer-wrap {
+    min-height: @footer-height;
+}
+
+/* FOOTER
+======================================== */
+
+    .footer-container {
+        #background-pattern > .chess(@footer-bg-back-color,@footer-bg-front-color,@footer-bg-size);
+        color: #fff;
+        min-height: @footer-height;
+        font-size: @font-size-small;
+        line-height: 1;
+        padding-bottom: 15px;
+        
+        a {
+            color: @footer-link-color;
+            &:hover {
+                color: @footer-link-hover-color;
+            }
+        }
+    }
+
+    
+/* Footer menu
+---------------------------------------- */
+.footer-menu-container {
+    padding-top: 20px;
+    .footer-menu {
+        display: inline-block;
+    }
+}
+.simple-menu.footer-menu{
+    > li {
+        border-left: 1px solid #fff;
+        
+        &:first-child {
+            border-left: none;
+            
+            a {
+                padding-left: 0;
+            }
+        }
+        
+        &:last-child {
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+
+    a {
+        padding: 0px 10px;
+    }
+}
+@media (min-width: @grid-float-breakpoint) {
+    .footer-menu-container {
+        text-align: center;
+    }
+}
+
+/* copuright and developed containers
+---------------------------------------- */
+.developed-container {
+    font-size: @font-size-small - 1px;
+    padding-top: 20px;
+    text-align: right;
+    text-transform: uppercase;
+}
+.copyright-container {
+    font-size: @font-size-small - 1px;
+    padding-top: 20px;
+    text-transform: uppercase;
+}

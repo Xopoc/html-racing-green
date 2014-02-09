@@ -1,0 +1,31 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// BACKGROUND PATTERNS
+// --------------------------------------------------
+#background-pattern {
+    // Chess pattern
+    .chess (@back-color: #000, @front-color: #fff, @cell-size: 30px) {
+        background: @back-color;
+        background: 
+                -webkit-linear-gradient(135deg, transparent 75%, @front-color 0%) 0 0,
+                -webkit-linear-gradient(-45deg, transparent 75%, @front-color 0%) @cell-size/2 @cell-size/2,
+                -webkit-linear-gradient(135deg, transparent 75%, @front-color 0%) @cell-size/2 @cell-size/2,
+                -webkit-linear-gradient(-45deg, transparent 75%, @front-color 0%) 0 0,
+                @back-color; // Safari 5.1-6, Chrome 10+
+        background: 
+                linear-gradient(135deg, transparent 75%, @front-color 0%) 0 0,
+                linear-gradient(-45deg, transparent 75%, @front-color 0%) @cell-size/2 @cell-size/2,
+                linear-gradient(135deg, transparent 75%, @front-color 0%) @cell-size/2 @cell-size/2,
+                linear-gradient(-45deg, transparent 75%, @front-color 0%) 0 0,
+                @back-color; // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+        background-size: @cell-size @cell-size;
+        background-repeat: repeat;
+    }
+    
+}
+
+
+
+
