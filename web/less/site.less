@@ -1,12 +1,16 @@
+.smooth-transiton {
+  .smooth-transiton();
+}
+
 a {
-    .transition(all .2s ease-in-out);
+    &:extend(.smooth-transiton all);
 }
 
 /* STICKY FOOTER
 ======================================== */
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 body > .body-wrap {
     height: auto;
@@ -18,26 +22,64 @@ body > .footer-wrap {
     min-height: @footer-height;
 }
 
-/* FOOTER
+
+/* COMMON
 ======================================== */
 
-    .footer-container {
-        #background-pattern > .chess(@footer-bg-back-color,@footer-bg-front-color,@footer-bg-size);
-        color: #fff;
-        min-height: @footer-height;
-        font-size: @font-size-small;
-        line-height: 1;
-        padding-bottom: 15px;
-        
-        a {
-            color: @footer-link-color;
-            &:hover {
-                color: @footer-link-hover-color;
-            }
+/* Styled blocks
+---------------------------------------- */
+.styled-container {
+    background-color: @styled-pattern-bg-color;
+    background-image: url(@styled-pattern-bg-img);
+}
+
+.styled-heading {
+    background-color: @styled-heading-bg-color;
+    background-image: url(@styled-heading-bg-img);
+}
+
+/* Social blocks
+---------------------------------------- */
+.social-buttons {
+    > a {
+        display: inline-block;
+        padding: 3px 9px;
+        vertical-align: middle;
+    }
+}
+
+
+/* HEADER
+======================================== */
+.header-container {
+    background-color: @header-bg-color;
+    background-image: url(@header-bg-img);
+    color: #fff;
+}
+/* Navbar
+---------------------------------------- */
+
+/* FOOTER
+======================================== */
+.footer-container {    
+    background-color: @footer-bg-color;
+    background-image: url(@footer-bg-img);
+    .box-shadow(inset 0px -15px 30px rgba(0,0,0,.5));
+    color: #fff;
+    min-height: @footer-height;
+    font-size: @font-size-small;
+    line-height: 1;
+    padding-bottom: 15px;
+
+    a {
+        color: @footer-link-color;
+        &:hover {
+            color: @footer-link-hover-color;
         }
     }
+}
 
-    
+
 /* Footer menu
 ---------------------------------------- */
 .footer-menu-container {
@@ -49,15 +91,15 @@ body > .footer-wrap {
 .simple-menu.footer-menu{
     > li {
         border-left: 1px solid #fff;
-        
+
         &:first-child {
             border-left: none;
-            
+
             a {
                 padding-left: 0;
             }
         }
-        
+
         &:last-child {
             a {
                 padding-right: 0;

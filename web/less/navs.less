@@ -13,34 +13,171 @@
     &:extend(.clearfix all);
 
     > li {
-      display: block;
-      position: relative;
-      
-      > a {
         display: block;
         position: relative;
-        padding: @nav-link-padding;
-      }
+
+        > a {
+            display: block;
+            position: relative;
+            padding: @nav-link-padding;
+        }
     }
 
     // Prevent IE8 from misplacing imgs
     //
     // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
     > li > a > img {
-      max-width: none;
+        max-width: none;
     }
-  
-  
+
+
     // Give the tabs something to sit on
     &-tabs {
         > li {
-             float: left;
+            float: left;
 
-             &:first-child {
-                 border-left: none;
-             }
+            &:first-child {
+                border-left: none;
+            }
         }
-     }
+    }
 }
 
+// Styled navbar
+// --------------------------------------------------
 
+// Default navbar
+.navbar-styled {
+    margin-bottom: 0;
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        height: auto;
+        min-height: 90px;
+        min-width: 222px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .social-buttons {
+        &.visible-xs{
+            margin-right: 10px;
+        }
+        /*float: right;*/
+    }
+
+    @media (min-width: @grid-float-breakpoint-max) {
+        .navbar-collapse {
+            padding-top: 58px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-form {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0;
+            width: @styled-navbar-form-max-width;
+
+            .btn-link {
+                background-color: @styled-navbar-search-background;
+                color: rgba(red(@header-link-color), green(@header-link-color), blue(@header-link-color), .6);
+                &:hover,
+                &:focus {
+                    color: @header-link-hover-color;
+                }
+            }
+            
+            
+            .form-control {
+                background-color: @styled-navbar-search-background;
+                border: none;
+                .box-shadow(none);
+                color: @header-link-color;
+                float: right;
+                width: @styled-navbar-form-min-width;
+                .transition(width .4s ease-in-out);
+                
+                &:focus {
+                    width: 100%;
+                    .box-shadow(none);
+                }
+            }
+        }
+    }
+    @media (max-width: @grid-float-breakpoint-max) {
+        .navbar-collapse {
+            padding-bottom: 20px;
+        }
+        .navbar-nav {
+            > li {
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .navbar-nav {
+        > li > a {
+            color: @header-link-color;
+            text-transform: uppercase;
+            font-family: @header-font-family;
+            font-size: @font-size-large - 1px;
+            padding: @styled-navbar-padding;    
+
+            &:hover,
+                &:focus {
+                color: @header-link-hover-color;
+                background: none;
+            }
+        }
+        > .active > a {
+            &,
+            &:hover,
+                &:focus {
+                color: @header-link-color;
+                cursor: default;
+                text-decoration: underline;
+            }
+        }
+
+        &:last-child {
+            > li {
+                &:last-child {
+                    > a {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-toggle {
+        margin-left: 30px;
+        border-color: @navbar-default-toggle-border-color;
+        &:hover,
+            &:focus {
+            background-color: @navbar-default-toggle-hover-bg;
+        }
+        .icon-bar {
+            background-color: @navbar-default-toggle-icon-bar-bg;
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

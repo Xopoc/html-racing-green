@@ -31,21 +31,28 @@
     </head>
     <body>
         <div class="body-wrap">
+            {% block header %}
+                {% include 'components/header.html.twig' %}
+            {% endblock %}            
 {#            <h1 style="font-size: 20px;">Racing Green <i class="glyphicon glyphicon-leaf"></i> <i class="fa fa-smile-o"></i></h1>#}
             {% block menu %}
-                <p>
-                    Cheking twig url generation:
+                <div class="styled-container">
+                    <div class="styled-heading">
+                        Cheking twig url generation:
+                    </div>
                     <ul class="simple-menu simple-menu-tabs">
                         <li><a href="{{ urlFor('home') }}">home</a></li>
                         <li><a href="{{ urlFor('hello', {"name": "Xopoc"}) }}">profile</a></li>
                         <li><a href="{{ baseUrl() }}">base Url</a></li>
                     </ul>
-                </p>
+                </div>
             {% endblock %}
             {% block content %}{% endblock %}
         </div>
         <div class="footer-wrap">
-            {% include 'components/footer.html.twig' %}
+            {% block footer %}
+                {% include 'components/footer.html.twig' %}
+            {% endblock %}
         </div>
         
         

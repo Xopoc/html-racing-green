@@ -3,19 +3,16 @@
 
 @font-family-sans-serif:  'Open Sans', Helvetica, Arial, sans-serif;
 @headings-font-family:  'Oswald', Helvetica, Arial, sans-serif;
+@headings-color: #959d03;
 
-@header-bg-back-color: #0e3907;
-@header-bg-front-color: #0a2505;
-@header-bg-size: 8px;
-@footer-bg-back-color: @header-bg-back-color;
-@footer-bg-front-color: @header-bg-front-color;
-@footer-bg-size: @header-bg-size;
-@styled-pattern-bg-back-color: #e4e4e4;
-@styled-pattern-bg-front-color: #fff;
-@styled-pattern-bg-size: @header-bg-size;
-@styled-header-bg-back-color: #959d03;
-@styled-header-bg-front-color: #7a8103;
-@styled-header-bg-size: @header-bg-size;
+@header-bg-color: #0e3907;
+@header-bg-img: 'data:image/gif;base64,R0lGODlhBAAEAKECAAolBQ45B////////yH5BAEKAAIALAAAAAAEAAQAAAIGTACGqBkFADs=';
+@footer-bg-color: @header-bg-color;
+@footer-bg-img: @header-bg-img;
+@styled-pattern-bg-color: #e4e4e4;
+@styled-pattern-bg-img: 'data:image/gif;base64,R0lGODlhBAAEAKECAOTk5Pf39////////yH5BAEKAAIALAAAAAAEAAQAAAIGBBKGqAkFADs=';
+@styled-heading-bg-color: #959d03;
+@styled-heading-bg-img: 'data:image/gif;base64,R0lGODlhBAAEAKECAHqBA5WdA////////yH5BAEKAAIALAAAAAAEAAQAAAIGBBKGqAkFADs=';
 
 
 @footer-height: 50px;
@@ -23,5 +20,11 @@
 @footer-link-color: @headings-color;
 @footer-link-hover-color: lighten(@footer-link-color, 30%);
 
-@headings-color: #959d03;
-@footer-link-color: @headings-color;
+@header-link-color: #fff;
+@header-link-hover-color: lighten(@headings-color, 30%);
+@header-font-family: @headings-font-family;
+
+@styled-navbar-padding: 5px 12px;
+@styled-navbar-search-background: rgba(0,0,0,.4);
+@styled-navbar-form-min-width: 130px;
+@styled-navbar-form-max-width: 300px;
