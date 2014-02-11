@@ -6,6 +6,15 @@ a {
     &:extend(.smooth-transiton all);
 }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    text-transform: uppercase;
+}
+
+h1, .h1 {
+    color: @color-h1;
+}
+
 /* STICKY FOOTER
 ======================================== */
 html,
@@ -75,19 +84,15 @@ body > .footer-wrap {
 
         h3 {
             display: inline-block;
-            text-transform: uppercase;
             color: @header-link-color;
             background-color: @styled-heading-bg-color;
             padding: @carousel-heading-padding-vertical @carousel-heading-padding-horizontal;
+            font-size: @font-size-h1;
         }
 
         &-content {
             padding: @carousel-heading-padding-vertical @carousel-heading-padding-horizontal;
             background-color: @header-bg-color;
-
-            > p {
-                margin-bottom: 0;
-            }
         }
     }
 
@@ -118,7 +123,67 @@ body > .footer-wrap {
     }
 }
 
+/* Content
+---------------------------------------- */
+.content-container {
+    padding-top: @content-padding-vertical/2;
+    padding-bottom: @content-padding-vertical/2;
 
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* thumbnails
+---------------------------------------- */
+.simple-thumbnails {
+    .thumbnail {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        > a {
+            display: block;
+            position: relative;
+            &:after {
+                display: block;
+                font-family: FontAwesome;
+                content: "@{fa-var-search-plus}";
+                text-align: center;
+                height: 32px;
+                width: 32px;
+                line-height: 32px;
+                font-size: 32px;
+                position: absolute;
+                color: #fff;
+                text-shadow: 0 0 3px rgba(0,0,0,1);
+                left: 50%;
+                top: 50%;
+                margin-top: -16px;
+                margin-left: -16px;
+                opacity: 0;
+            }
+            &:hover {
+                &:after  {
+                    &:extend(.smooth-transiton all);
+                    opacity: .5;
+                }
+            }
+        }
+
+        .caption {
+            padding: 0;
+            font-size: @font-size-small;
+
+            h3 {
+                color: @thumbnail-captoon-heading-color;
+                font-size: @font-size-small;
+                margin-top: 10px;
+            }
+        }
+    }
+}
 
 
 /* HEADER
