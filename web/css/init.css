@@ -7197,11 +7197,11 @@ td.visible-print {
   padding-bottom: 5px;
   padding-top: 5px;
 }
-.navbar-styled .social-buttons {
-  /*float: right;*/
-}
 .navbar-styled .social-buttons.visible-xs {
   margin-right: 10px;
+}
+.navbar-styled .social-buttons.hidden-xs > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 767px) {
   .navbar-styled .navbar-collapse {
@@ -7216,7 +7216,7 @@ td.visible-print {
   }
   .navbar-styled .navbar-form {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     padding: 0;
     width: 300px;
@@ -7274,8 +7274,8 @@ td.visible-print {
   cursor: default;
   text-decoration: underline;
 }
-.navbar-styled .navbar-nav:last-child > li:last-child > a {
-  padding-right: 0;
+.navbar-styled .navbar-nav:last-child {
+  margin-right: -6px;
 }
 .navbar-styled .navbar-toggle {
   margin-left: 30px;
