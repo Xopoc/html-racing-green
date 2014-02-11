@@ -14,6 +14,10 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
     color: @color-h1;
 }
+h4, .h4 {
+    padding-top: 10px;
+    color: @thumbnail-captoon-heading-color;
+}
 
 /* STICKY FOOTER
 ======================================== */
@@ -142,6 +146,7 @@ body > .footer-wrap {
         background-color: transparent;
         border: none;
         padding: 0;
+        margin-top: 20px;
 
         > a {
             display: block;
@@ -193,8 +198,38 @@ body > .footer-wrap {
     background-image: url(@header-bg-img);
     color: #fff;
 }
-/* Navbar
+/* Header menu
 ---------------------------------------- */
+.simple-menu.header-menu{
+    margin-bottom: 20px;
+    
+    > li {
+        border-left: 1px solid @headings-color;
+
+        &:first-child {
+            border-left: none;
+            
+            a {
+                padding-left: 0;
+            }
+        }
+
+        &:last-child {
+            a {
+                padding-right: 0;
+            }
+        }
+    }
+
+    a {
+        padding: 0px 15px;
+        color: @headings-color;
+        text-transform: uppercase;
+        font-family: @headings-font-family;
+        font-size: @font-size-large;
+    }
+}
+
 
 /* FOOTER
 ======================================== */

@@ -7326,6 +7326,11 @@ h1,
 .h1 {
   color: #000000;
 }
+h4,
+.h4 {
+  padding-top: 10px;
+  color: #000000;
+}
 /* STICKY FOOTER
 ======================================== */
 html,
@@ -7436,6 +7441,7 @@ body > .footer-wrap {
   background-color: transparent;
   border: none;
   padding: 0;
+  margin-top: 20px;
 }
 .simple-thumbnails .thumbnail > a {
   display: block;
@@ -7478,8 +7484,30 @@ body > .footer-wrap {
   background-image: url('data:image/gif;base64,R0lGODlhBAAEAKECAAolBQ45B////////yH5BAEKAAIALAAAAAAEAAQAAAIGTACGqBkFADs=');
   color: #fff;
 }
-/* Navbar
+/* Header menu
 ---------------------------------------- */
+.simple-menu.header-menu {
+  margin-bottom: 20px;
+}
+.simple-menu.header-menu > li {
+  border-left: 1px solid #959d03;
+}
+.simple-menu.header-menu > li:first-child {
+  border-left: none;
+}
+.simple-menu.header-menu > li:first-child a {
+  padding-left: 0;
+}
+.simple-menu.header-menu > li:last-child a {
+  padding-right: 0;
+}
+.simple-menu.header-menu a {
+  padding: 0px 15px;
+  color: #959d03;
+  text-transform: uppercase;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
 /* FOOTER
 ======================================== */
 .footer-container {
