@@ -8,11 +8,15 @@
         <title>Racing Green</title>
 
 
-        <script>
-            less = {
-                env: "development"
-            };
-        </script>
+        {% block styles %}{% endblock %}
+        
+        {% block scripts %}
+            <script>
+                less = {
+                    env: "development"
+                };
+            </script>
+        {% endblock %}
         
         <!-- Web fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600' rel='stylesheet' type='text/css'>

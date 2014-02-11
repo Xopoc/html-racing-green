@@ -7326,6 +7326,10 @@ h1,
 .h1 {
   color: #000000;
 }
+h2,
+.h2 {
+  margin-top: 0;
+}
 h4,
 .h4 {
   padding-top: 10px;
@@ -7434,6 +7438,8 @@ body > .footer-wrap {
 .content-container .container-fluid {
   padding-left: 0;
   padding-right: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 /* thumbnails
 ---------------------------------------- */
@@ -7476,6 +7482,20 @@ body > .footer-wrap {
   color: #000000;
   font-size: 12px;
   margin-top: 10px;
+}
+/* thumbnails
+---------------------------------------- */
+.styled-form .form-control {
+  border-radius: 0;
+  border-color: #959d03;
+}
+.styled-form .btn-default {
+  border-radius: 0;
+  color: #fff;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  border-color: #959d03;
+  background: #959d03 url('data:image/gif;base64,R0lGODlhBAAEAKECAHqBA5WdA////////yH5BAEKAAIALAAAAAAEAAQAAAIGBBKGqAkFADs=');
 }
 /* HEADER
 ======================================== */

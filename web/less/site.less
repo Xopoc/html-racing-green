@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
     color: @color-h1;
 }
+h2, .h2 {
+    margin-top: 0;
+}
 h4, .h4 {
     padding-top: 10px;
     color: @thumbnail-captoon-heading-color;
@@ -136,6 +139,8 @@ body > .footer-wrap {
     .container-fluid {
         padding-left: 0;
         padding-right: 0;
+        margin-left: -@grid-gutter-width/2;
+        margin-right: -@grid-gutter-width/2;
     }
 }
 
@@ -190,6 +195,22 @@ body > .footer-wrap {
     }
 }
 
+/* thumbnails
+---------------------------------------- */
+.styled-form {
+    .form-control {
+        border-radius: 0;
+        border-color: @styled-heading-bg-color;
+    }
+    .btn-default {
+        border-radius: 0;
+        color: #fff;
+        font-family: @headings-font-family;
+        text-transform: uppercase;
+        border-color: @styled-heading-bg-color;
+        background: @styled-heading-bg-color url(@styled-heading-bg-img);
+    }
+}
 
 /* HEADER
 ======================================== */
