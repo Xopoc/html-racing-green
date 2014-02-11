@@ -7200,9 +7200,6 @@ td.visible-print {
 .navbar-styled .social-buttons.visible-xs {
   margin-right: 10px;
 }
-.navbar-styled .social-buttons.hidden-xs > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
 @media (min-width: 767px) {
   .navbar-styled .navbar-collapse {
     padding-top: 58px;
@@ -7264,8 +7261,7 @@ td.visible-print {
 }
 .navbar-styled .navbar-nav > li > a:hover,
 .navbar-styled .navbar-nav > li > a:focus {
-  color: #f1fb3e;
-  background: none;
+  background: rgba(0, 0, 0, 0.4);
 }
 .navbar-styled .navbar-nav > .active > a,
 .navbar-styled .navbar-nav > .active > a:hover,
