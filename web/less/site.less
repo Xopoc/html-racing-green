@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6,
         &:hover {
             color: @headings-color;
         }
-            
+
     }
 }
 
@@ -71,7 +71,7 @@ body > .footer-wrap {
     }
 }
 
-/* Filters
+/* Tables
 ---------------------------------------- */
 .products-table {
     &.table-bordered {
@@ -188,6 +188,50 @@ body > .footer-wrap {
     }
     .btn-link {
         cursor: default;
+    }
+}
+
+.description-content {
+    border: 1px solid @styled-heading-bg-color;
+}
+table.description-content {
+    tr {
+        &:first-child {
+            th,
+            td {
+                border-top-color: @styled-heading-bg-color;
+            }
+        }
+    }
+}
+div.description-content {
+    padding: 4px 8px;
+}
+.products-carousel {
+    margin-bottom: 20px;
+}
+.products-carousel-indicators {
+    margin-bottom: 20px;
+    a {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: @screen-sm-min) {
+            margin-right: 0;
+            margin-left: 15px;
+            margin-bottom: 15px;
+        }
+        @media (min-width: @screen-md-min) {
+            margin-left: 0;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        @media (min-width: @screen-lg-min) {
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
     }
 }
 

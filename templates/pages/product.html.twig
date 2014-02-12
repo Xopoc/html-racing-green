@@ -1,1 +1,332 @@
 {% extends "base.html.twig" %}
+
+{% block content %}
+<div class="container content-container">
+    <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+            <table class="filters-block table table-bordered table-condensed">
+                <caption>
+                    <span class="btn btn-default btn-sm disabled"><i class="fa fa-filter"></i></span>
+                    <span class="filters-container">
+                        <span class="btn btn-xs btn-link">Subaru<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">Impreza<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">2007<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">body<i class="close">&times;</i></span>
+                    </span>
+                </caption>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Make
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Model
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    mark
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Fuel type
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Transmission
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>
+    </div>
+
+    <div class="row">
+        <div  class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
+            <div class="carousel-container products-carousel">
+                <div id="carousel-for-product" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        {% for index in 1..6 %}
+                        <div class="item{% if loop.first %} active{% endif %}">
+                            <img src="http://lorempixel.com/460/335/transport/{{ index }}/" alt="">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <a class="left carousel-control" href="#carousel-for-product" data-slide="prev">
+                        <span class="fa fa-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-for-product" data-slide="next">
+                        <span class="fa fa-chevron-right"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div  class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="products-carousel-indicators">
+                {% for i in 0..5 %}
+                <a href="#" data-target="#carousel-for-product" data-slide-to="{{ i }}"><img src="http://lorempixel.com/100/100/transport/{{ i +1 }}/" alt=""></a>
+                {% endfor %}
+            </div>
+        </div>
+        <div  class="col-xs-12 col-md-3 col-lg-2">
+            <table class="products-table table table-bordered table-condensed">
+                <thead>
+                    <tr>
+                        <th colspan="2">Price & Delivery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Price:
+                        </td>
+                        <td>
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                300.00
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            exc. VAT:
+                        </td>
+                        <td>
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                100.00
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Delivery:
+                        </td>
+                        <td>
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                30.00
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Availavility:
+                        </td>
+                        <td>
+                            <strong>
+                                In Stock
+                            </strong>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="purchase">
+                            <button class="btn btn-link btn-block">Buy Now</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-5 col-lg-offset-1">
+            <h2>Product Details</h2>
+            <table class="description-content table table-striped table-condensed table-hover">
+                <tbody>
+                    <tr>
+                        <td>
+                            Year: 
+                        </td>
+                        <td>
+                            2007
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Part ref: 
+                        </td>
+                        <td>
+                            98452347
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Engine: 
+                        </td>
+                        <td>
+                            2500 Petrol Vehicle
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ref: 
+                        </td>
+                        <td>
+                            1324123
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Condition: 
+                        </td>
+                        <td>
+                            New
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Body: 
+                        </td>
+                        <td>
+                            4 door Saloon
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Trim Type: 
+                        </td>
+                        <td>
+                            RB320 see marc before sales
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Transmission: 
+                        </td>
+                        <td>
+                            6 Speed Manual
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Vehicle color: 
+                        </td>
+                        <td>
+                            Unversal
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-5">
+            <h2>Product Description</h2>
+            <div class="description-content">
+                <p>
+                    Aliquam lectus lorem, viverra et tortor quis, consectetur dapibus risus. Donec in justo nibh. Sed ultrices iaculis imperdiet. Vestibulum ligula est, gravida vitae facilisis non, eleifend sed odio. Morbi et faucibus justo. Praesent interdum vulputate arcu et rhoncus.
+                </p>
+                <p>
+                    Praesent sollicitudin accumsan risus. Vivamus in bibendum nisl. Maecenas non nibh tellus.
+                </p>
+                <p>
+                    Suspendisse interdum, arcu a laoreet hendrerit, metus metus lobortis odio, quis aliquet urna elit ullamcorper ante.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-container styled-container">
+    <div class="container simple-thumbnails">
+        <div class="row">
+            <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+                <div class="container-fluid">
+                    <div class="col-xs-12">
+                        <h1>Related products in our catalogue</h1>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="thumbnail">
+                            <a href="#img1"><img src="http://lorempixel.com/260/165/transport/1/" alt=""></a>
+                            <div class="caption">
+                                <h3>2009 Volkswagen Passat B6</h3>
+                                <p>Automatic transmission gearbox</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="thumbnail">
+                            <a href="#img1"><img src="http://lorempixel.com/260/165/transport/2/" alt=""></a>
+                            <div class="caption">
+                                <h3>2012 Ford Focus</h3>
+                                <p>Front drivers airbag</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="thumbnail">
+                            <a href="#img1"><img src="http://lorempixel.com/260/165/transport/3/" alt=""></a>
+                            <div class="caption">
+                                <h3>2010 Hyndai Sanata EF 2nd Generation</h3>
+                                <p>Leather multi-functional steereng wheel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="thumbnail">
+                            <a href="#img1"><img src="http://lorempixel.com/260/165/transport/5/" alt=""></a>
+                            <div class="caption">
+                                <h3>2008 Audi A7 Sports Edition</h3>
+                                <p>Drive shaft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
