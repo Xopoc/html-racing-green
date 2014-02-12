@@ -1,1 +1,181 @@
 {% extends "base.html.twig" %}
+
+{% block content %}
+<div class="container content-container">
+    <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+            <table class="filters-block table table-bordered table-condensed">
+                <caption>
+                    <span class="btn btn-default btn-sm disabled"><i class="fa fa-filter"></i></span>
+                    <span class="filters-container">
+                        <span class="btn btn-xs btn-link">Subaru<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">Impreza<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">2007<i class="close">&times;</i></span>
+                        <span class="btn btn-xs btn-link">body<i class="close">&times;</i></span>
+                    </span>
+                </caption>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Make
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Model
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    mark
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Fuel type
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="btn-group btn-group-xs">
+                                <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                                    Transmission
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                    <li><label><input type="checkbox"> Check me out</label></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="products-table table table-bordered table-striped table-condensed">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Purchase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="img"><img src="http://lorempixel.com/105/105/technics/1" alt=""></td>
+                        <td>
+                            <h5><a href="{{ urlFor('product') }}">Vivamus sit amet porta velit. Phasellus consectetur velit quis semper sodales.</a></h5>
+                            <p>
+                                Aenean non augue ut justo lobortis aliquam. Suspendisse posuere placerat dignissim. Phasellus nec nunc lorem.
+                            </p>
+                        </td>
+                        <td class="price">
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                30.00
+                            </strong>
+                        </td>
+                        <td class="purchase">
+                            <button class="btn btn-link">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img"><img src="http://lorempixel.com/105/105/technics/2" alt=""></td>
+                        <td>
+                            <h5><a href="{{ urlFor('product') }}">Quisque mi neque, aliquam vestibulum ligula ac, bibendum dignissim mauris.</a></h5>
+                            <p>
+                                Fusce sagittis urna eget feugiat tristique. Aenean non suscipit diam. Morbi purus ligula, faucibus id libero sit amet, molestie dapibus leo.
+                            </p>
+                        </td>
+                        <td class="price">
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                35.00
+                            </strong>
+                        </td>
+                        <td class="purchase">
+                            <button class="btn btn-link">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img"><img src="http://lorempixel.com/105/105/technics/3" alt=""></td>
+                        <td>
+                            <h5><a href="{{ urlFor('product') }}">Donec in justo nibh. Sed ultrices iaculis imperdiet.</a></h5>
+                            <p>
+                                Aliquam lectus lorem, viverra et tortor quis, consectetur dapibus risus.
+                            </p>
+                        </td>
+                        <td class="price">
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                38.00
+                            </strong>
+                        </td>
+                        <td class="purchase">
+                            <button class="btn btn-link">Buy Now</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="img"><img src="http://lorempixel.com/105/105/technics/4" alt=""></td>
+                        <td>
+                            <h5><a href="{{ urlFor('product') }}">Curabitur nulla est, lobortis ac nibh u.</a></h5>
+                            <p>
+                                Vestibulum egestas et velit vitae ornare. Aliquam vulputate dignissim risus, mattis ullamcorper massa tincidunt vitae. 
+                            </p>
+                        </td>
+                        <td class="price">
+                            <strong>
+                                <i class="fa fa-gbp"></i>
+                                48.00
+                            </strong>
+                        </td>
+                        <td class="purchase">
+                            <button class="btn btn-link">Buy Now</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

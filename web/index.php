@@ -38,10 +38,9 @@ $app->get('/products/', function () use ($app) {
     ));
 })->name('products');
 
-$app->get('/product/:product', function ($product) use ($app) {
+$app->get('/product', function () use ($app) {
     $app->render('pages/product.html.twig', array(
         'active' => 'products',
-        'product' => $product,
     ));
 })->name('product');
 
